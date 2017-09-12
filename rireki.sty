@@ -412,8 +412,8 @@
 }
 \SetPos(0,31.5) {
 	\Put(0,0){\line(1,0){\名前欄の幅}}
-	\Put(0,\ふりがな欄の高さ){\dashbox{.5}(\住所欄の幅,\ふりがな欄の高さ)[l]{\scriptsize \hspace{2mm}ふりがな \hspace{10mm} \@現住所読み}}
-	\Put(0,10){\makebox(\住所欄の幅,5)[l]{\scriptsize \hspace{2mm}現\hspace{1mm}住\hspace{1mm}所\hspace{3mm}〒\hspace{2mm}\@現住所郵便番号}}
+	\Put(0,\ふりがな欄の高さ){\dashbox{.5}(\住所欄の幅,\ふりがな欄の高さ)[l]{\scriptsize \hspace{2mm}ふりがな \hspace{5mm} \@現住所読み}}
+	\Put(0,10){\makebox(\住所欄の幅,5)[l]{\scriptsize \hspace{2mm}現\hspace{1mm}住\hspace{1mm}所\hspace{3mm}〒\hspace{1mm}\@現住所郵便番号}}
 	\Put(0,17.5){\makebox(\住所欄の幅,11.5)[c]{\normalsize \@現住所}}
 }
 \SetPos(\住所欄の幅,31.5) {
@@ -421,7 +421,7 @@
 	\Put(0,5){\makebox(\電話欄の幅,5)[l]{\scriptsize \hspace{2mm}電話}}
 	\Put(0,5.25){\makebox(\電話欄の幅,5)[c]{\normalsize \@現住所電話番号}}
 	\Put(0,11.25){\makebox(\電話欄の幅,5)[l]{\scriptsize \hspace{2mm}email}}
-	\Put(0,11.5){\dashbox{.5}(\電話欄の幅,5)[c]{\normalsize \@email}}
+	\Put(0,11.5){\dashbox{.5}(\電話欄の幅,5)[c]{\small \@email}}
 	\Put(0,15.6){\makebox(\電話欄の幅,5)[l]{\scriptsize \hspace{2mm}website}}
 	\Put(0,16.75){\makebox(\電話欄の幅,5)[b]{\footnotesize \@website}}
 }
