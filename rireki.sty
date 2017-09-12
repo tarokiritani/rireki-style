@@ -368,10 +368,10 @@
 \SetPos(0,0) {
 	\def\枠の高さ{66.5}
 	\Put(0,-1){\makebox(25,5)[t]{\Large \bf 履\hspace{5mm}歴\hspace{5mm}書}}
-	\Put(70,-1){\makebox(25,3)[t]{\scriptsize \today 現在}}
+	\Put(70,-1){\makebox(25,3)[t]{\scriptsize \西暦{\today} 現在}}
 	\Sub{\写真横}{2}{\w}
 	\Sub{\写真縦}{2}{\h}
-	\Put(103.5,28.5){\dashbox{.5}(\w,\h)[c]{\parbox{\w mm}{\center\scriptsize 写真をはる位置\\\vspace{1mm}(縦\写真縦 mm, 横\写真横 mm)}}}
+	\Put(103.5,28.5){\makebox(\w,\h)[c]{\parbox{\w mm}{\center\scriptsize 写真をはる位置\\\vspace{1mm}(縦\写真縦 mm, 横\写真横 mm)}}}
 	\ifx\@顔写真\empty\else
 		\Put(103.5,28.5){\includegraphics[height=4cm]{\@顔写真}}
 	\fi
@@ -390,9 +390,9 @@
 	\Put(0,5){\dashbox{.5}(\名前欄の幅,\ふりがな欄の高さ)[l]{\scriptsize \hspace{2mm}ふりがな}}
 	\Put(0,10){\makebox(\名前欄の幅,\ふりがな欄の高さ)[l]{\scriptsize \hspace{2mm}氏\hspace{5mm}名}}
 }
-\SetPos(25,0) {
+\SetPos(35,0) {
 	\Put(0,5){\makebox(73,5)[l]{\scriptsize \@姓読み}}
-	\Put(20,5){\makebox(53,5)[l]{\scriptsize \@名読み}}
+	\Put(21.5,5){\makebox(53,5)[l]{\scriptsize \@名読み}}
 	\Put(0,20){\makebox(73,16.5)[l]{\Large \@姓}}
 	\Put(20,20){\makebox(53,16.5)[l]{\Large \@名}}
 }
