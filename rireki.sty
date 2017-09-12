@@ -291,9 +291,9 @@
 \def\現住所郵便番号#1{\def\@現住所郵便番号{#1}}
 \def\現住所#1{\def\@現住所{#1}}
 \def\現住所読み#1{\def\@現住所読み{#1}}
-\def\現住所市外局番#1{\def\@現住所市外局番{#1}}
 \def\現住所電話番号#1{\def\@現住所電話番号{#1}}
-\def\現住所呼び出し#1{\def\@現住所呼び出し{#1}}
+\def\email#1{\def\@email{#1}}
+\def\website#1{\def\@website{#1}}
 %
 % 連絡先
 %
@@ -349,7 +349,8 @@
 %
 \def\枠の幅{149.5}
 \def\名前欄の幅{98}
-\def\住所欄の幅{117}
+\def\住所欄の幅{95}
+\def\電話欄の幅{54.5}
 \def\ふりがな欄の高さ{5}
 \def\写真縦{40}
 \def\写真横{30}
@@ -417,16 +418,12 @@
 }
 \SetPos(\住所欄の幅,31.5) {
 	\Put(0,0){\line(0,-1){35.0}}
-	\Put(0,3.5){\makebox(32.5,3.5)[l]{\scriptsize \hspace{2mm}電話}}
-	\def\@editbuf{
-		\normalsize
-		\ifx\@現住所市外局番\empty\else
-			{\hspace{2mm}(\hspace{1mm}\@現住所市外局番\hspace{1mm})}
-		\fi
-	}
-	\Put(0,7){\makebox(32.5,3.5)[l]{\scriptsize \hspace{2mm}市外局番\@editbuf}}
-	\Put(0,12){\dashbox{.5}(32.5,5)[c]{\normalsize \@現住所電話番号}}
-	\Put(0,17){\makebox(32.5,5)[c]{\normalsize \@現住所呼び出し}}
+	\Put(0,5){\makebox(\電話欄の幅,5)[l]{\scriptsize \hspace{2mm}電話}}
+	\Put(0,5.25){\makebox(\電話欄の幅,5)[c]{\normalsize \@現住所電話番号}}
+	\Put(0,11.25){\makebox(\電話欄の幅,5)[l]{\scriptsize \hspace{2mm}email}}
+	\Put(0,11.5){\dashbox{.5}(\電話欄の幅,5)[c]{\normalsize \@email}}
+	\Put(0,15.6){\makebox(\電話欄の幅,5)[l]{\scriptsize \hspace{2mm}website}}
+	\Put(0,16.75){\makebox(\電話欄の幅,5)[b]{\footnotesize \@website}}
 }
 \SetPos(0,49) {
 	\Put(0,0){\line(1,0){\枠の幅}}
@@ -435,16 +432,9 @@
 	\Put(0,17.5){\makebox(\住所欄の幅,11.5)[c]{\normalsize \@連絡先}}
 }
 \SetPos(\住所欄の幅,49) {
-	\Put(0,3.5){\makebox(32.5,3.5)[l]{\scriptsize \hspace{2mm}電話}}
-	\def\@editbuf{
-		\normalsize
-		\ifx\@連絡先市外局番\empty\else
-			{\hspace{2mm}(\hspace{1mm}\@連絡先市外局番\hspace{1mm})}
-		\fi
-	}
-	\Put(0,7){\makebox(32.5,3.5)[l]{\scriptsize \hspace{2mm}市外局番\@editbuf}}
-	\Put(0,12){\dashbox{.5}(32.5,5)[c]{\normalsize \@連絡先電話番号}}
-	\Put(0,17){\makebox(32.5,5)[c]{\normalsize \@連絡先呼び出し}}
+	\Put(0,5){\makebox(\電話欄の幅,5)[l]{\scriptsize \hspace{2mm}電話}}
+	\Put(0,11.5){\dashbox{.5}(\電話欄の幅,5)[c]{\normalsize \@連絡先電話番号}}
+	\Put(0,16.75){\makebox(\電話欄の幅,5)[c]{\normalsize \@連絡先呼び出し}}
 }
 %----------------
 % 学歴職歴
